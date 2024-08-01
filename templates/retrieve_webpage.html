@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <table class="table text-center">
+        <tr class="bg-danger">
+            <th>ID</th>
+            <th>Topic Name</th>
+            <th>Name</th>
+            <th>url</th>
+            <th>Email</th>
+        </tr>
+        {% for i in webpage %}
+        <tr class="text-danger">
+            <td>{{i.id}}</td>
+            <td>{{i.topic_name}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.url}}</td>
+            <td>{{i.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
