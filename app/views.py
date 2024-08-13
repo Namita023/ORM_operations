@@ -81,3 +81,22 @@ def retrieve_accessrecord(request):
     QLAO=AccessRecord.objects.all()
     d={"accessrecord":QLAO}
     return render(request,"retrieve_accessrecord.html",d)
+
+def update_webpage(request):
+    #Webpage.objects.filter(name='RONALDO').update(email='ronaldo@gmail.com')
+    #Webpage.objects.filter(name='NEERAJ').update(topic_name="JAVELIN")
+    #Webpage.objects.filter(name='NAMITA').update(email='indian@gmail.com')
+    #Webpage.objects.update_or_create(name='ROHIT',defaults={"email":'rohit@gmail.com'})
+    CTO=Topic.objects.get(topic_name='CHESS')
+    #Webpage.objects.update_or_create(name='PRAGYAN',defaults={'url':'http://pragyan.in','topic_name':CTO})
+    WTO=Webpage.objects.all()
+    d={'webpages':WTO}
+    return render(request,"display_webpage.html",d)
+
+def delete_webpage(request):
+    #Webpage.objects.filter(name="SMITH").delete()
+    #Webpage.objects.filter(name="NAMITA").delete()
+    #Webpage.objects.all().delete()
+    WTO=Webpage.objects.all()
+    d={'webpages':WTO}
+    return render(request,"display_webpage.html",d)

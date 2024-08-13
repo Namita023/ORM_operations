@@ -25,5 +25,7 @@ urlpatterns = [
     path("insert_accessrecord/",insert_accessrecord,name="insert_accessrecord"),
     path("retrieve_topic/",retrieve_topic,name="retrieve_topic"),
     path("retrieve_webpage/",retrieve_webpage,name="retrieve_webpage"),
-    path("retrieve_accessrecord/",retrieve_accessrecord,name="accessrecord")
+    path("retrieve_accessrecord/",retrieve_accessrecord,name="accessrecord"),
+    path("update_webpage/",update_webpage,name="update_webpage"),
+    path('delete_webpage/',delete_webpage,name='delete_webpage'),
 ]
